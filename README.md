@@ -5,9 +5,29 @@
 
 <h2 align="center">Cybersecurity Projects:</h2>
  👨‍💻 All of my projects are available at (https://github.com/Youngsb24?tab=repositories)
+ <br>
+ </br>
 
+<img src="https://imgur.com/5EMXm7Z.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+- https://github.com/Youngsb24/Honeynet-In-Azure
+<br> </br>
 
+<img src="https://imgur.com/dIYbTJ4.png" height="25%" width="25%" alt="Disk Sanitization Steps"/>
+- https://github.com/Youngsb24/Architect-a-Splunk-Cluster-Enviroment
+  <br></br>
+- https://github.com/Youngsb24/Splunk_Dashboard
+  <br></br>
+- https://github.com/Youngsb24/Drill-Down-Dashboard
+  <br></br>
+- https://github.com/Youngsb24/Workflow-Action
+  <br></br>
 
+<h2 align="center">System Administration Projects:</h2>
+User Management In Linux Command Line
+<br>- https://github.com/Youngsb24/Linux-UserManagement</br>
+<br>Active Directory, Windows Server/Domain Controller, and DNS Services Configuration</br>
+
+<br></br>
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/https://www.linkedin.com/in/sambide/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/sambide/" height="30" width="40" /></a>
