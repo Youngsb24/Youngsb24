@@ -3,19 +3,10 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=youngsb24&label=Profile%20views&color=0e75b6&style=flat" alt="youngsb24" /> </p>
 
-- 🔭 I’m currently working on **Creating a Honeynet**
+<h2 align="center">Cybersecurity Projects:</h2>
+ 👨‍💻 All of my projects are available at (https://github.com/Youngsb24?tab=repositories)
 
-- 👯 I’m looking to collaborate on **anything Cloud/Cybersecurity Related**
 
-- 🤝 I’m looking for help with **becoming better at writing code**
-
-- 👨‍💻 All of my projects are available at [https://github.com/Youngsb24?tab=repositories](https://github.com/Youngsb24?tab=repositories)
-
-- 💬 Ask me about **Linux,AWS,Azure,Splunk**
-
-- 📫 How to reach me **https://www.linkedin.com/in/sambide/**
-
-- ⚡ Fun fact **I love to workout, constantly learn and I love playing COD, NBA 2k, Diablo IV**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
