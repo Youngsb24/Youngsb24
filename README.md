@@ -26,8 +26,8 @@
 
 <h2 align="center">System Administration Projects:</h2>
 User Management In Linux Command Line
-<br>- https://github.com/Youngsb24/Linux-UserManagement</br>
-<br>Active Directory, Windows Server/Domain Controller, and DNS Services Configuration</br>
+<br>- https://github.com/Youngsb24/Linux-UserManagement</br><br></br>
+Active Directory, Windows Server/Domain Controller, and DNS Services Configuration<br>- https://github.com/Youngsb24/Active-Directory</br>
 
 <br></br>
 <h3 align="left">Connect with me:</h3>
