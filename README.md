@@ -7,6 +7,9 @@
  👨‍💻 All of my projects are available at (https://github.com/Youngsb24?tab=repositories)
  <br>
  </br>
+<img src=https://imgur.com/6Al4sW1.png" height="20%" width="20%" alt="Disk Sanitization Steps"/>
+- https://github.com/Youngsb24/Vulnerability-Management
+ <br></br>
 
 <img src="https://imgur.com/5EMXm7Z.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
 - https://github.com/Youngsb24/Honeynet-In-Azure
