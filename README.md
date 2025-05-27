@@ -15,6 +15,9 @@
 - https://github.com/Youngsb24/Patching-Remediation
  <br></br>
 
+
+<img src="https://imgur.com/6BmTLm4.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+
 <img src="https://imgur.com/5EMXm7Z.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
 - https://github.com/Youngsb24/Honeynet-In-Azure
 <br> </br>
