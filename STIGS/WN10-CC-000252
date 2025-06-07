@@ -1,0 +1,38 @@
+<#
+.SYNOPSIS
+    This PowerShell script disables the Game DVR feature by creating the AllowGameDVR registry key under $regPath.
+
+.NOTES
+    Author          : Sam Bide
+    LinkedIn        : linkedin.com/in/SamBide/
+    GitHub          : github.com/youngsb24
+    Date Created    : 2025-07-06
+    Last Modified   : 2025-07-06
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-CC-000252
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> .\__remediation_template(STIG-ID-WN10-CC-000252).ps1 
+#>
+ # Define the registry path and value details
+$regPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\GameDVR"
+$valueName = "AllowGameDVR"
+$valueData = 0x0  # Hex value for 00000000 (0 in decimal)
+
+# Check if the registry path exists; if not, create it
+if (-not (Test-Path $regPath)) {
+    New-Item -Path $regPath -Force | Out-Null
+}
+
+# Set the registry value
+New-ItemProperty -Path $regPath -Name $valueName -Value $valueData -PropertyType DWord -Force 
