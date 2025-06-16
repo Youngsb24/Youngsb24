@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    This PowerShell script disables the Game DVR feature by creating the AllowGameDVR registry key under $regPath.
+     Disables elevated privilege MSI installations by setting AlwaysInstallElevated to 0 in the system-wide policy.
 
 .NOTES
     Author          : Sam Bide
@@ -24,10 +24,6 @@
     Example syntax:
     PS C:\> .\__remediation_template(STIG-ID-WN19-CC-000430).ps1 
 #>
-
-
-
-
 
 # Define registry path and value
 $regPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Installer"
