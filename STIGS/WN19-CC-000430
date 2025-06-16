@@ -1,4 +1,29 @@
+<#
+.SYNOPSIS
+    This PowerShell script disables the Game DVR feature by creating the AllowGameDVR registry key under $regPath.
 
+.NOTES
+    Author          : Sam Bide
+    LinkedIn        : linkedin.com/in/SamBide/
+    GitHub          : github.com/youngsb24
+    Date Created    : 2025-06-15
+    Last Modified   : 2025-06-15
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN19-CC-000430
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> .\__remediation_template(STIG-ID-WN19-CC-000430).ps1 
+#>
 
 
 
