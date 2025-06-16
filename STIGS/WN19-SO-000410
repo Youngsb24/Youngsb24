@@ -1,9 +1,29 @@
+<#
+.SYNOPSIS
+     Applies system-level security and policy configurations under the System registry path.
 
+.NOTES
+    Author          : Sam Bide
+    LinkedIn        : linkedin.com/in/SamBide/
+    GitHub          : github.com/youngsb24
+    Date Created    : 2025-06-15
+    Last Modified   : 2025-06-15
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN19-SO-000410
 
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
 
-
-
-
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> .\__remediation_template(STIG-ID-WN19-SO-000410).ps1 
+#>
 
 # Base path
 $basePath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
