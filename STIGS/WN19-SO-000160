@@ -1,0 +1,54 @@
+
+<#
+.SYNOPSIS
+Configures SMB (Server Message Block) client settings to enhance security in the LanmanWorkstation service.
+
+.NOTES
+    Author          : Sam Bide
+    LinkedIn        : linkedin.com/in/SamBide/
+    GitHub          : github.com/youngsb24
+    Date Created    : 2025-07-20
+    Last Modified   : 2025-07-20
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN19-SO-000160
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> .\__remediation_template(STIG-ID-WN19-SO-000160).ps1 
+#>
+# Registry values to configure
+$values = @{
+    "EnablePlainTextPassword"    = @{Value=0; Type="DWord"}
+    "EnableSecuritySignature"    = @{Value=1; Type="DWord"}
+    "RequireSecuritySignature"   = @{Value=1; Type="DWord"}
+    "ServiceDllUnloadOnStop"     = @{Value=1; Type="DWord"}
+    "AllowInsecureGuestAuth"     = @{Value=0; Type="DWord"}
+    "ServiceDll"                 = @{
+        Value = [System.Text.Encoding]::Unicode.GetBytes("%SystemRoot%\System32\wkssvc.dll") + @(0,0);
+        Type  = "ExpandString"  # Equivalent to REG_EXPAND_SZ (hex(2))
+    }
+}
+
+# Apply values
+foreach ($name in $values.Keys) {
+    $entry = $values[$name]
+    $type = $entry.Type
+    $value = $entry.Value
+
+    # Use Set-ItemProperty for DWord; special handling for ExpandString
+    if ($type -eq "DWord") {
+        New-ItemProperty -Path $regPath -Name $name -Value $value -PropertyType DWord -Force | Out-Null
+    }
+    elseif ($type -eq "ExpandString") {
+        Set-ItemProperty -Path $regPath -Name $name -Value "%SystemRoot%\System32\wkssvc.dll"
+    }
+}
