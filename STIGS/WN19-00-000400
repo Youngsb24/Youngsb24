@@ -20,9 +20,8 @@ Disables the SMBv1 client driver by setting the 'Start' value for the mrxsmb10 s
     PowerShell Ver. : 
 
 .USAGE
-    Put any usage instructions here.
-    Example syntax:
-    PS C:\> .\__remediation_template(STIG-ID-WN10-00-000400).ps1 
+
+
 
 #>
 
