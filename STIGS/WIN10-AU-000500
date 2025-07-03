@@ -14,9 +14,9 @@
     STIG-ID         : WN10-AU-000500
 
 .TESTED ON
-    Date(s) Tested  : 
+    Date(s) Tested  : 2025-06-06
     Tested By       : 
-    Systems Tested  : 
+    Systems Tested  : Windows 19
     PowerShell Ver. : 
 
 .USAGE
