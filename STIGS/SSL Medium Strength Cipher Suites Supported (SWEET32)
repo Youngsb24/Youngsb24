@@ -1,1 +1,40 @@
+<#
+.SYNOPSIS
+Disables the use of the Triple DES 168 cipher in Windows SCHANNEL to improve cryptographic security.
 
+
+
+.NOTES
+    Author          : Sam Bide
+    LinkedIn        : linkedin.com/in/SamBide/
+    GitHub          : github.com/youngsb24
+    Date Created    : 2025-07-03
+    Last Modified   : 2025-07-03
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : 42873
+    STIG-ID         : N/A
+
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : Windows 19
+    PowerShell Ver. : 
+
+.USAGE
+
+#>
+
+# Define registry path and value
+$regPath = "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\Triple Des 168"
+$valueName = "Enabled"
+$valueData = 0x0  # Disabled
+
+# Create key if it doesn't exist
+if (-not (Test-Path $regPath)) {
+    New-Item -Path $regPath -Force | Out-Null
+}
+
+# Set the "Enabled" value to disable Triple DES
+New-ItemProperty -Path $regPath -Name $valueName -Value $valueData -PropertyType DWord -Force | Out-Null
