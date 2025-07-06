@@ -3,3 +3,54 @@
 Configures SSL/TLS protocols for SCHANNEL to disable insecure versions (SSL 3.0, TLS 1.1)
 and ensure TLS 1.2 is enabled on both client and server side.
 
+
+.NOTES
+    Author          : Sam Bide
+    LinkedIn        : linkedin.com/in/SamBide/
+    GitHub          : github.com/youngsb24
+    Date Created    : 2025-07-06
+    Last Modified   : 2025-07-06
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : 157288
+    STIG-ID         : N/A
+
+.TESTED ON
+    Date(s) Tested  : 2025-07-06
+    Tested By       : 
+    Systems Tested  : Windows 19
+    PowerShell Ver. : 
+
+.USAGE
+
+#>
+# Base path for SCHANNEL protocols
+$basePath = "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols"
+
+# Define protocol configurations
+$protocols = @(
+    # SSL 3.0
+    @{ Path = "$basePath\SSL 3.0\Client"; Name = "Enabled";           Value = 0; Type = "DWord" },
+    @{ Path = "$basePath\SSL 3.0\Server"; Name = "Enabled";           Value = 0; Type = "DWord" },
+
+    # TLS 1.1
+    @{ Path = "$basePath\TLS 1.1\Client"; Name = "DisabledByDefault"; Value = 1; Type = "DWord" },
+    @{ Path = "$basePath\TLS 1.1\Client"; Name = "Enabled";           Value = 0; Type = "DWord" },
+    @{ Path = "$basePath\TLS 1.1\Server"; Name = "DisabledByDefault"; Value = 1; Type = "DWord" },
+    @{ Path = "$basePath\TLS 1.1\Server"; Name = "Enabled";           Value = 0; Type = "DWord" },
+
+    # TLS 1.2
+    @{ Path = "$basePath\TLS 1.2\Client"; Name = "DisabledByDefault"; Value = 0; Type = "DWord" },
+    @{ Path = "$basePath\TLS 1.2\Client"; Name = "Enabled";           Value = 1; Type = "DWord" },
+    @{ Path = "$basePath\TLS 1.2\Server"; Name = "DisabledByDefault"; Value = 0; Type = "DWord" },
+    @{ Path = "$basePath\TLS 1.2\Server"; Name = "Enabled";           Value = 1; Type = "DWord" }
+)
+
+# Create keys and set values
+foreach ($item in $protocols) {
+    if (-not (Test-Path $item.Path)) {
+        New-Item -Path $item.Path -Force | Out-Null
+    }
+
+    New-ItemProperty -Path $item.Path -Name $item.Name -Value $item.Value -PropertyType $item.Type -Force | Out-Null
+}
