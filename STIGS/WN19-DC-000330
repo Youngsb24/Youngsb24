@@ -1,0 +1,37 @@
+
+
+
+
+# Set registry path
+$regPath = "HKLM:\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters"
+
+# Create the key if it doesn't exist
+if (-not (Test-Path $regPath)) {
+    New-Item -Path $regPath -Force
+}
+
+# Set DWORD values
+$settings = @{
+    "DisablePasswordChange"  = 0
+    "MaximumPasswordAge"     = 30
+    "RequireSignOrSeal"      = 1
+    "RequireStrongKey"       = 1
+    "SealSecureChannel"      = 1
+    "SignSecureChannel"      = 1
+    "SysvolReady"            = 1
+    "RefusePasswordChange"   = 1
+}
+
+foreach ($name in $settings.Keys) {
+    New-ItemProperty -Path $regPath -Name $name -Value $settings[$name] -PropertyType DWORD -Force
+}
+
+# Set string values
+Set-ItemProperty -Path $regPath -Name "Update" -Value "no" -Type String -Force
+Set-ItemProperty -Path $regPath -Name "SysVol" -Value "C:\Windows\SYSVOL\sysvol" -Type String -Force
+
+# Set REG_EXPAND_SZ (hex type 2) for ServiceDll
+$expandValue = "%SystemRoot%\system32\netlogon.dll"
+New-ItemProperty -Path $regPath -Name "ServiceDll" -Value $expandValue -PropertyType ExpandString -Force
+
+Write-Host "Netlogon parameters configured successfully."
