@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-     Disables elevated privilege MSI installations by setting AlwaysInstallElevated to 0 in the system-wide policy.
+    This script configures secure Netlogon parameters to align with Windows domain best practices. It enforces secure channel signing/sealing, controls password change behavior, and sets system path references for SYSVOL and service DLLs. These settings are typically applied in domain environments to enhance security and ensure consistent secure communication between domain members and controllers.
 
 .NOTES
     Author          : Sam Bide
