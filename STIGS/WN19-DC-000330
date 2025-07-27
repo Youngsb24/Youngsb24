@@ -1,6 +1,28 @@
+<#
+.SYNOPSIS
+     Disables elevated privilege MSI installations by setting AlwaysInstallElevated to 0 in the system-wide policy.
+
+.NOTES
+    Author          : Sam Bide
+    LinkedIn        : linkedin.com/in/SamBide/
+    GitHub          : github.com/youngsb24
+    Date Created    : 2025-07-27
+    Last Modified   : 2025-07-27
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN19-DC-000330
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
 
 
-
+#>
 
 # Set registry path
 $regPath = "HKLM:\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters"
